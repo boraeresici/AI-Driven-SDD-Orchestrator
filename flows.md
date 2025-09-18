@@ -1,8 +1,8 @@
 # SDD Workflow Flows
 
-**Version**: 1.1.0  
+**Version**: 1.2.0  
 **Created**: 2025-01-27  
-**Last Updated**: 2025-09-17
+**Last Updated**: 2025-09-18
 
 ## Overview
 This document defines the detailed workflow for generating SDD artifacts from user ideas using remote templates.
@@ -11,11 +11,17 @@ Default templates repository: https://github.com/boraeresici/AI-Driven-SDD-Orche
 
 ## Workflow Steps
 
-### Step 1: Repository & Template Fetching
-1. Clone or sparse-checkout the remote repository (read-only)
-2. Download `flows.md` first to understand the process
-3. Download all templates specified in `TEMPLATE_MAP_JSON`
-4. Validate all required templates are present
+### Step 1: Project Initialization & Template Fetching
+1. Use the uvx command to initialize the project:
+   ```
+   uvx --from git+https://github.com/boraeresici/AI-Driven-SDD-Orchestrator orca init <PROJECT_NAME>
+   ```
+2. Change to the project directory:
+   ```
+   cd <PROJECT_NAME>
+   ```
+3. Verify that all required templates and files are present in the project directory
+4. Read `flows.md` to understand the process
 
 ### Step 2: Research Phase
 **Input**: User idea, research template  
@@ -98,3 +104,5 @@ Default templates repository: https://github.com/boraeresici/AI-Driven-SDD-Orche
 
 ## Version History
 - v1.0.0 (2025-01-27): Initial SDD workflow definition
+- v1.1.0 (2025-09-17): Updated workflow steps
+- v1.2.0 (2025-09-18): Added uvx command for project initialization
